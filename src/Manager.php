@@ -275,6 +275,8 @@ class Manager
         if (!$response['Success']) {
             throw new Exception\RequestException($response);
         }
+
+        return Model\Refund::fromArray($response['Model']);
     }
 
     /**

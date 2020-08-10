@@ -874,7 +874,7 @@ class Transaction
      */
     public static function fromArray($params)
     {
-        $transaction = new Transaction();
+        $transaction = new static();
 
         $transaction->setId($params['TransactionId']);
         $transaction->setAmount($params['Amount']);
